@@ -1,2 +1,2 @@
-# appointment-tracker
-Simple List Application Using Express
+# The Appointment Tracker
+A simple list application using Express
