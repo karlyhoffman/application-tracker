@@ -12,8 +12,14 @@
 	      <th>Follow Up Email Sent</th>
 	   </tr>
 	   <tr ng-repeat="job in jobs">
-	      <td>{{job.submitDate}}</td>
-	      <td>{{job.jobTitle}}</td>
+	      <td>{{job.submitDate}}</td> 
+	      <td>
+	      	<label ng-click="editing = true" ng-hide="editing" class="editing-label">
+				{{job.jobTitle}}
+			</label>
+			<input ng-show="editing" ng-blur="editing = false" ng-model="job.jobTitle" class="editing-label" type="text">
+			<button ng-click="saveJob()" ng-show="editing">Save</button>
+	      </td>
 	      <td>{{job.company}}</td>
 	      <td>{{job.jobDescLink}}</td>
 	      <td>{{job.interviewerNameAndTitle}}</td>
