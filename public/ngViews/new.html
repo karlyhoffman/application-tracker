@@ -1,21 +1,22 @@
 <div ng-controller='addCtrl'>
-	<form action="/jobs" method="POST">
+	<form ng-submit="addJobApp(submitDate, jobTitle, company, jobDescLink, interviewerNameAndTitle, interviewerContact, interviewerNotes, followUpEmail)">
 		<h3>Application Submitted</h3>
-		<input type="date" placeholder="Date Submitted" name="submitDate">
+		<input type="date" placeholder="Date Submitted" ng-model="submitDate">
 		<h3>Job Title</h3>
-		<input type="text" placeholder="Title" name="jobTitle">
+		<input type="text" placeholder="Title" ng-model="jobTitle">
 		<h3>Company</h3>
-		<input type="text" placeholder="Name" name="company">
+		<input type="text" placeholder="Name" ng-model="company">
 		<h3>Job Description</h3>
-		<input type="text" placeholder="Link" name="jobDescLink">
+		<input type="text" placeholder="Link" ng-model="jobDescLink">
 		<h3>Interviewer</h3>
-		<input type="text" placeholder="Name and Title" name="interviewerNameAndTitle">
+		<input type="text" placeholder="Name and Title" ng-model="interviewerNameAndTitle">
 		<h3>Interviewer Contact</h3>
-		<input type="text" placeholder="Email or Phone" name="interviewerContact">
+		<input type="text" placeholder="Email or Phone" ng-model="interviewerContact">
 		<h3>Interviewer Notes</h3>
-		<input type="text" placeholder="Notes" name="interviewerNotes">
+		<input type="text" placeholder="Notes" ng-model="interviewerNotes">
 		<h3>Follow Up Email Sent</h3>
-		<input type="checkbox" placeholder="" name="followUpEmail">
-		<button type="submit">Submit</button>
+		<input type="checkbox" placeholder="" ng-model="followUpEmail">
+		
+		<input type="submit" value="Add">
 	</form>
 </div>
