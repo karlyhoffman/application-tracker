@@ -15,32 +15,12 @@ angular.module('jobTrackerApp', ['ngRoute']).config([
       .when('/', {
         templateUrl: './ngViews/home.html',
         controller: 'mainCtrl'
+      })
+      .when('/new', {
+        templateUrl: './ngViews/new.html',
+        controller: 'addCtrl'
       });
-      // .when('/scores', {
-      //   templateUrl: 'ngViews/score.html',
-      //   controller: 'ScoreCtrl'
-      // })
-      // .when('/register', {
-      //   templateUrl: 'ngViews/register.html',
-      //   controller: 'RegisterCtrl'
-      // })
-      // .when('/user', {
-      //   templateUrl: 'ngViews/user.html',
-      //   controller: 'UserCtrl'
-      // })
-      // .when('/add', {
-      //   templateUrl: 'ngViews/add.html',
-      //   controller: 'AddSongCtrl'
-      // })
-      // .when('/songs', {
-      //   templateUrl: 'ngViews/songs.html',
-      //   controller: 'SongsCtrl'
-      // })
-      // .when('/:id', {
-      //   templateUrl: 'ngViews/lyrics.html',
-      //   controller: 'LyricsCtrl'
-      // });
 
-    // $routeProvider.otherwise({ redirectTo: '/' });
+    $routeProvider.otherwise({ redirectTo: '/' });
   }
 ]);
