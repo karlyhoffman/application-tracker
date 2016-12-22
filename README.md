@@ -1,5 +1,5 @@
 # The Appointment Tracker
-A simple list application using Express and MongoDB + ES6 practice
+A simple MEAN stack application + ES6 practice
 
 ## Summary:
 For those transitioning between jobs, I wrote a simple list application using MEAN stack technologies. The aim is create a job tracker to help stay organized while job hunting. 
