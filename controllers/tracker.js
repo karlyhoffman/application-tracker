@@ -50,7 +50,7 @@ controller.delete('/:id', function(req, res, next) {
   jobModel.findByIdAndRemove(req.params.id, req.body, function(error, job) {
     if (error) return error;
     res.json({
-      "Message": "Job with the title of " + job.jobTitle + " has been removed"
+      "message": "Job with the title of " + job.jobTitle + " has been removed"
     });
   });
 });
