@@ -25,7 +25,7 @@
 	      <td>{{job.interviewerNameAndTitle}}</td>
 	      <td>{{job.interviewerContact}}</td>
 	      <td>{{job.interviewerNotes}}</td>
-	      <td>{{job.followUpEmail}}</td>
+	      <td><input type="checkbox" ng-model="job.followUpEmail"></td>
 	   </tr>
 	</table>
 	<button ng-click="addPage()">Add Application</button>
