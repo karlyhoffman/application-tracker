@@ -1,33 +1,47 @@
 <div ng-controller='mainCtrl'>
 	<h2>Applications</h2>
 	<table>
-	   <tr>
-	      <th>Application Submitted</th>
-	      <th>Job Title</th>
-	      <th>Company</th>
-	      <th>Job Description</th>
-	      <th>Interviewer</th>
-	      <th>Interviewer Contact</th>
-	      <th>Interviewer Notes</th>
-	      <th>Follow Up Email Sent</th>
-	   </tr>
-	   <tr ng-repeat="job in jobs">
-	      <td>{{job.submitDate}}</td> 
-	      <td>
-	      	<label ng-click="editing = true" ng-hide="editing" class="editing-label">
-				{{job.jobTitle}}
-			</label>
-			<input ng-show="editing" ng-blur="editing = false" ng-model="job.jobTitle" class="editing-label" type="text">
-			<button ng-click="saveJob()" ng-show="editing">Save</button>
-	      </td>
-	      <td>{{job.company}}</td>
-	      <td>{{job.jobDescLink}}</td>
-	      <td>{{job.interviewerNameAndTitle}}</td>
-	      <td>{{job.interviewerContact}}</td>
-	      <td>{{job.interviewerNotes}}</td>
-	      <td><input type="checkbox" ng-model="job.followUpEmail"></td>
-	      <td><button ng-model="job" ng-click="delete(job)">delete</button></td>
-	   </tr>
+		<tr>
+			<th>Application Submitted</th>
+			<th>Job Title</th>
+			<th>Company</th>
+			<th>Job Description</th>
+			<th>Interviewer</th>
+			<th>Interviewer Contact</th>
+			<th>Interviewer Notes</th>
+			<th>Follow Up Email Sent</th>
+	    </tr>
+	   	<tr ng-repeat="job in jobs">
+			<td>{{job.submitDate}}</td> 
+			<td>
+			<label ng-hide="editing">{{job.jobTitle}}</label>
+			<input ng-show="editing" ng-model="job.jobTitle" type="text">
+			</td>
+			<td>
+			<label ng-hide="editing">{{job.company}}</label>
+			<input ng-show="editing" ng-model="job.company" type="text">
+			</td>
+			<td>
+			<label ng-hide="editing">{{job.jobDescLink}}</label>
+			<input ng-show="editing" ng-model="job.jobDescLink" type="text">
+			</td>
+			<td>
+			<label ng-hide="editing">{{job.interviewerNameAndTitle}}</label>
+			<input ng-show="editing" ng-model="job.interviewerNameAndTitle" type="text">
+			</td>
+			<td>
+			<label ng-hide="editing">{{job.interviewerContact}}</label>
+			<input ng-show="editing" ng-model="job.interviewerContact" type="text">
+			</td>
+			<td>
+			<label ng-hide="editing">{{job.interviewerNotes}}</label>
+			<input ng-show="editing" ng-model="job.interviewerNotes" type="text">
+			</td>
+			<td><input type="checkbox" ng-model="job.followUpEmail" ng-click="save(job)"></td>
+			<td><button ng-click="editing = true" ng-hide="editing">edit</button></td>
+			<td><button ng-model="job" ng-click="save(job); editing = false;" ng-show="editing">save</button></td>
+			<td><button ng-model="job" ng-click="delete(job)">delete</button></td>
+		</tr>
 	</table>
 	<button ng-click="addPage()">Add Application</button>
 </div>

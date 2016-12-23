@@ -31,15 +31,31 @@ controller.post('/', function(req, res, next) {
   });
 });
 
-//update by id
+// update by id
 controller.put('/:id', function(req, res, next) {
   jobModel.findByIdAndUpdate(req.params.id, req.body, function(error, job) {
+    job.submitDate = req.body.submitDate;
+    job.jobTitle = req.body.jobTitle;
+    job.company = req.body.company;
+    job.jobDescLink = req.body.jobDescLink;
+    job.interviewerNameAndTitle = req.body.interviewerNameAndTitle;
+    job.interviewerContact = req.body.interviewerContact;
+    job.interviewerNotes = req.body.interviewerNotes;
+    job.followUpEmail = req.body.followUpEmail;
     if (error) return error;
     res.json(job);
   })
 });
 controller.patch('/:id', function(req, res, next) {
   jobModel.findByIdAndUpdate(req.params.id, req.body, function(error, job) {
+    job.submitDate = req.body.submitDate;
+    job.jobTitle = req.body.jobTitle;
+    job.company = req.body.company;
+    job.jobDescLink = req.body.jobDescLink;
+    job.interviewerNameAndTitle = req.body.interviewerNameAndTitle;
+    job.interviewerContact = req.body.interviewerContact;
+    job.interviewerNotes = req.body.interviewerNotes;
+    job.followUpEmail = req.body.followUpEmail;
     if (error) return error;
     res.json(job);
   })
