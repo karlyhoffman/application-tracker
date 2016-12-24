@@ -1,0 +1,8 @@
+md-checkbox.dotted .md-icon {
+ border-width: 1px;
+ border-style: dashed;
+}
+
+md-checkbox.md-checked.purple .md-icon {
+ background-color: rgba(103, 58, 183, 0.87);
+}

@@ -1,7 +1,7 @@
 console.log('Linked');
 // [require('angular-route')]
 
-angular.module('jobTrackerApp', ['ngRoute']).config([
+angular.module('jobTrackerApp', ['ngRoute', 'ngMaterial']).config([
   '$locationProvider',
   '$routeProvider',
   function($locationProvider, $routeProvider) {

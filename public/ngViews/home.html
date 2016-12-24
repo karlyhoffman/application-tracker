@@ -40,7 +40,9 @@
 				<label ng-hide="editing">{{job.interviewerNotes}}</label>
 				<input ng-show="editing" ng-model="job.interviewerNotes" type="text">
 			</td>
-			<td><input type="checkbox" ng-model="job.followUpEmail" ng-click="save(job)"></td>
+			<td ng-click="save(job)">
+				<md-checkbox type="checkbox" ng-model="job.followUpEmail" aria-label="Checkbox 2" class="dotted purple">
+			</td>
 			<td><button ng-click="editing = true" ng-hide="editing">edit</button></td>
 			<td><button ng-model="job" ng-click="save(job); editing = false;" ng-show="editing">save</button></td>
 			<td><button ng-model="job" ng-click="delete(job)">delete</button></td>
