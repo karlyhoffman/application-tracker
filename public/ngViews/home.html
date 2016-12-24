@@ -43,10 +43,10 @@
 			<td ng-click="save(job)">
 				<md-checkbox type="checkbox" ng-model="job.followUpEmail" aria-label="Checkbox 2" class="dotted purple">
 			</td>
-			<td><button ng-click="editing = true" ng-hide="editing">edit</button></td>
-			<td><button ng-model="job" ng-click="save(job); editing = false;" ng-show="editing">save</button></td>
-			<td><button ng-model="job" ng-click="delete(job)">delete</button></td>
+			<td><md-button class="md-raised" ng-click="editing = true" ng-hide="editing">edit</md-button></td>
+			<td><md-button class="md-raised" ng-model="job" ng-click="save(job); editing = false;" ng-show="editing">save</md-button></td>
+			<td><md-button class="md-raised delete" ng-model="job" ng-click="delete(job)">delete</md-button></td>
 		</tr>
 	</table>
-	<button ng-click="addPage()">Add Application</button>
+	<md-button class="md-raised add" ng-click="addPage()">Add Application</md-button>
 </div>
