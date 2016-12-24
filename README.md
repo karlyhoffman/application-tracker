@@ -9,3 +9,4 @@ For those transitioning between jobs, I wrote a simple list application using ME
 - Express
 - MongoDB
 - Angular
+- Angular Material
