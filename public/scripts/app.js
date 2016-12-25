@@ -9,7 +9,7 @@ angular.module('jobTrackerApp', ['ngRoute', 'ngMaterial']).config([
 
     $mdThemingProvider.theme('default')
     .primaryPalette('purple')
-    .accentPalette('orange')
+    .accentPalette('indigo')
 
     $locationProvider.html5Mode({
       enabled: true,
