@@ -4,7 +4,12 @@ console.log('Linked');
 angular.module('jobTrackerApp', ['ngRoute', 'ngMaterial']).config([
   '$locationProvider',
   '$routeProvider',
-  function($locationProvider, $routeProvider) {
+  '$mdThemingProvider',
+  function($locationProvider, $routeProvider, $mdThemingProvider) {
+
+    $mdThemingProvider.theme('default')
+    .primaryPalette('purple')
+    .accentPalette('orange')
 
     $locationProvider.html5Mode({
       enabled: true,

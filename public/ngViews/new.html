@@ -1,7 +1,7 @@
-<div ng-controller='addCtrl'>
+<div id="new" ng-controller='addCtrl'>
 	<form ng-submit="addJobApp(submitDate, jobTitle, company, jobDescLink, interviewerNameAndTitle, interviewerContact, interviewerNotes, followUpEmail)">
 		<h3>Application Submitted</h3>
-		<input type="date" placeholder="Date Submitted" ng-model="submitDate">
+		<md-datepicker type="date" placeholder="Date Submitted" ng-model="submitDate"></md-datepicker>
 		<h3>Job Title</h3>
 		<input type="text" placeholder="Title" ng-model="jobTitle">
 		<h3>Company</h3>
@@ -16,7 +16,9 @@
 		<input type="text" placeholder="Notes" ng-model="interviewerNotes">
 		<h3>Follow Up Email Sent</h3>
 		<input type="checkbox" placeholder="" ng-model="followUpEmail">
-		
-		<md-button class="md-raised add" type="submit">Add</md-button>
+		<div id="formBtns">
+		<md-button class="md-raised" id="back" ng-click="homePage()">Back</md-button>
+		<md-button class="md-raised" type="submit">Add</md-button>
+		</div>
 	</form>
 </div>

@@ -1,15 +1,24 @@
+body, html {
+	width: 100%;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+table {
+    table-layout: fixed;
+}
+
 td {
     text-align: center;
     vertical-align: middle;
 }
 
 md-checkbox.dotted .md-icon {
- border-width: 1px;
- border-style: dashed;
-}
-
-md-checkbox.md-checked.purple .md-icon {
- background-color: rgba(103, 58, 183, 0.87);
+	border-width: 1px;
+	border-style: dashed;
 }
 
 .md-button.md-raised:not([disabled]) {
@@ -17,17 +26,13 @@ md-checkbox.md-checked.purple .md-icon {
 }
 
 .md-button {
-  padding: 0 3px 0 3px;
-  margin: 3px 4px;
-  min-width: 50px;
-  border-radius: 3px;
-  // font-size: 14px;
-  // text-align: center;
-  text-transform: uppercase;
-  font-weight: 300;
-  // text-decoration:none;
-  // border: none;
-  // outline: none;
+	display: inline-block;
+	padding: 0 3px 0 3px;
+	margin: 3px 4px;
+	min-width: 50px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 
 .md-button.delete {
@@ -36,8 +41,27 @@ md-checkbox.md-checked.purple .md-icon {
 }
 
 .md-button.add {
+	display: block;
+	margin: 4% auto;
 	font-weight: 500;
 	padding: 2px 15px;
-	margin: 0 auto;
 	text-align: center;
+}
+
+#new {
+	text-align: center;
+}
+
+#formBtns {
+	margin: 1.5% auto 3% auto;
+}
+
+#back {
+	color: red;
+	display: inline-block;
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 2%;
 }

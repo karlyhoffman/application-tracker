@@ -1,51 +1,51 @@
 <div>
-	<h2>Applications</h2>
-	<table>
+	<h2 class="md-display-1">Applications</h2>
+	<table layout="row">
 		<tr>
-			<th>Application Submitted</th>
-			<th>Job Title</th>
-			<th>Company</th>
-			<th>Job Description</th>
-			<th>Interviewer</th>
-			<th>Interviewer Contact</th>
-			<th>Interviewer Notes</th>
-			<th>Follow Up Email Sent</th>
+			<th flex>Application Submitted</th>
+			<th flex>Job Title</th>
+			<th flex>Company</th>
+			<th flex>Job Description</th>
+			<th flex>Interviewer</th>
+			<th flex>Interviewer Contact</th>
+			<th flex>Interviewer Notes</th>
+			<th flex>Follow Up Email Sent</th>
 	    </tr>
 	   	<tr ng-repeat="job in jobs">
-			<td>
+			<td flex>
 				<label ng-hide="editing" ng-bind="job.submitDate | date:'M/dd/yy'">{{job.submitDate}}</label>
-				<input ng-show="editing" ng-model="job.submitDate" type="date">
+				<md-datepicker ng-show="editing" ng-model="job.submitDate" type="date"></md-datepicker>
 			</td>
-			<td>
+			<td flex>
 				<label ng-hide="editing">{{job.jobTitle}}</label>
 				<input ng-show="editing" ng-model="job.jobTitle" type="text">
 			</td>
-			<td>
+			<td flex>
 				<label ng-hide="editing">{{job.company}}</label>
 				<input ng-show="editing" ng-model="job.company" type="text">
 			</td>
-			<td>
+			<td flex>
 				<label ng-hide="editing">{{job.jobDescLink}}</label>
 				<input ng-show="editing" ng-model="job.jobDescLink" type="text">
 			</td>
-			<td>
+			<td flex>
 				<label ng-hide="editing">{{job.interviewerNameAndTitle}}</label>
 				<input ng-show="editing" ng-model="job.interviewerNameAndTitle" type="text">
 			</td>
-			<td>
+			<td flex>
 				<label ng-hide="editing">{{job.interviewerContact}}</label>
 				<input ng-show="editing" ng-model="job.interviewerContact" type="text">
 			</td>
-			<td>
+			<td flex>
 				<label ng-hide="editing">{{job.interviewerNotes}}</label>
 				<input ng-show="editing" ng-model="job.interviewerNotes" type="text">
 			</td>
-			<td ng-click="save(job)">
+			<td ng-click="save(job)" flex>
 				<md-checkbox type="checkbox" ng-model="job.followUpEmail" aria-label="Checkbox 2" class="dotted purple">
 			</td>
-			<td><md-button class="md-raised" ng-click="editing = true" ng-hide="editing">edit</md-button></td>
-			<td><md-button class="md-raised" ng-model="job" ng-click="save(job); editing = false;" ng-show="editing">save</md-button></td>
-			<td><md-button class="md-raised delete" ng-model="job" ng-click="delete(job)">delete</md-button></td>
+			<td flex><md-button class="md-raised" ng-click="editing = true" ng-hide="editing">edit</md-button></td>
+			<td flex><md-button class="md-raised" ng-model="job" ng-click="save(job); editing = false;" ng-show="editing">save</md-button></td>
+			<td flex><md-button class="md-raised delete" ng-model="job" ng-click="delete(job)">delete</md-button></td>
 		</tr>
 	</table>
 	<md-button class="md-raised add" ng-click="addPage()">Add Application</md-button>
