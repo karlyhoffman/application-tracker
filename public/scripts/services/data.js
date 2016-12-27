@@ -1,7 +1,7 @@
 'use strict';
 angular.module('jobTrackerApp')
 .service('dataService', function($http) {
-	this.getJobs = function(callback) {
+	this.getJobs = (callback)=> {
 		$http.get('../jobs')
 		.then(callback)
 	};

@@ -8,7 +8,7 @@ const app 		= express();
 // require database
 require('./models/db');
 
-// controllers
+// require controllers
 const routes = require('./controllers/index');
 const tracker = require('./controllers/tracker.js'); 
 
@@ -21,23 +21,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
-// app.get('/', function(req, res) {
-//     res.render('angular');  
-// });
-
 // controllers
 app.use('/', routes);
 app.use('/jobs', tracker); 
 
 // catch 404 and forward to error handler
-// app.use(function(req, res, next) {
+// app.use((req, res, next)=> {
 //   var err = new Error('Not Found');
 //   err.status = 404;
 //   next(err);
 // });
 
 
-app.listen(3000, function(){
+app.listen(3000, ()=> {
 	console.log("The server is running. Catch it!");
 });
 

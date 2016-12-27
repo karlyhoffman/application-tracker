@@ -7,12 +7,12 @@ var connectionString = 'mongodb://localhost/tracker';
 mongoose.connect(connectionString);
 
 // 3 - listen for events and log changes
-mongoose.connection.on('connected', function() {
+mongoose.connection.on('connected', ()=> {
   console.log('Mongoose has connected to: ' + connectionString);
 });
-mongoose.connection.on('disconnected', function() {
+mongoose.connection.on('disconnected', ()=> {
   console.log('Mongoose has disconnected from: ' + connectionString);
 });
-mongoose.connection.on('error', function(error) {
+mongoose.connection.on('error', (error)=> {
   console.log('Mongoose has experienced an error: ' + error);
 });

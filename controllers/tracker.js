@@ -8,32 +8,32 @@ const bodyParser = require('body-parser');
 // RESTful API
 
 //get all
-controller.get('/', function(req, res, next) {
-  jobModel.find(function(error, jobs) {
+controller.get('/', (req, res, next)=> {
+  jobModel.find((error, jobs)=> {
     if (error) return error;
     res.json(jobs);
   });
 });
 
 //get by id
-controller.get('/:id', function(req, res, next) {
-  jobModel.findById(req.params.id, function(error, job) {
+controller.get('/:id', (req, res, next)=> {
+  jobModel.findById(req.params.id, (error, job)=> {
     if (error) return error;
     res.json(job);
   });
 });
 
 //create
-controller.post('/', function(req, res, next) {
-  jobModel.create(req.body, function(error, job) {
+controller.post('/', (req, res, next)=> {
+  jobModel.create(req.body, (error, job)=> {
     if (error) return error;
     res.json(job);
   });
 });
 
 // update by id
-controller.put('/:id', function(req, res, next) {
-  jobModel.findByIdAndUpdate(req.params.id, req.body, function(error, job) {
+controller.put('/:id', (req, res, next)=> {
+  jobModel.findByIdAndUpdate(req.params.id, req.body, (error, job)=> {
     job.submitDate = req.body.submitDate;
     job.jobTitle = req.body.jobTitle;
     job.company = req.body.company;
@@ -46,8 +46,8 @@ controller.put('/:id', function(req, res, next) {
     res.json(job);
   })
 });
-controller.patch('/:id', function(req, res, next) {
-  jobModel.findByIdAndUpdate(req.params.id, req.body, function(error, job) {
+controller.patch('/:id', (req, res, next)=> {
+  jobModel.findByIdAndUpdate(req.params.id, req.body, (error, job)=> {
     job.submitDate = req.body.submitDate;
     job.jobTitle = req.body.jobTitle;
     job.company = req.body.company;
@@ -62,8 +62,8 @@ controller.patch('/:id', function(req, res, next) {
 });
 
 //delete by id
-controller.delete('/:id', function(req, res, next) {
-  jobModel.findByIdAndRemove(req.params.id, req.body, function(error, job) {
+controller.delete('/:id', (req, res, next)=> {
+  jobModel.findByIdAndRemove(req.params.id, req.body, (error, job)=> {
     if (error) return error;
     res.json({
       "message": "Job with the title of " + job.jobTitle + " has been removed"
