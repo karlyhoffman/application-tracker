@@ -1,5 +1,6 @@
 # The Appointment Tracker
 A simple MEAN stack application + ES6 practice
+
 ![Job Tracker App](https://pbs.twimg.com/media/C0e84FsUQAAcxAJ.jpg:large "Job Tracker App")
 
 ## Summary:
